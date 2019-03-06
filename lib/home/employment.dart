@@ -8,18 +8,18 @@ class EmploymentItem extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      width: 200,
-      padding: EdgeInsets.fromLTRB(15.0,6.0,20.0,15),
+      width: 180,
+      padding: EdgeInsets.fromLTRB(15.0,6.0,10.0,10),
       child: Row(
         children: <Widget>[
           Column(           
             children: <Widget>[
               Container(
-                width: 120,
+                width: 100,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text('$title',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                    Text('$title',style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),),
                     Text('$subTitle',style:TextStyle(fontSize: 12,fontWeight: FontWeight.w400,color: Colors.grey),softWrap: true,),
                   ],
                 ) 

@@ -104,12 +104,14 @@ class RecommandViewState extends State<RecommandView> {
               children: <Widget>[
                 Section('就业班'),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     EmploymentItem(title: 'Java工程师',subTitle: '综合就业排名第一',src: 'https://class.imooc.com/static/module/index/img/java.png',),
                     EmploymentItem(title: '前端工程师',subTitle: '互联网时代数字火爆技术',src: 'https://class.imooc.com/static/module/index/img/fe.png',),
                   ],
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     EmploymentItem(title: 'Android工程师',subTitle: '移动设备市场份额第一',src: 'https://class.imooc.com/static/module/index/img/android.png',),
                     EmploymentItem(title: 'PHP工程师',subTitle: '世界上最好的语言',src: 'https://class.imooc.com/static/module/index/img/php.png',),
@@ -118,7 +120,7 @@ class RecommandViewState extends State<RecommandView> {
               ],
             )),
 
-          Container(
+        Container(
             margin: EdgeInsets.symmetric(vertical: 10),
             padding: EdgeInsets.fromLTRB(0.0, 0.0, 0, 20),
             color: Colors.white,
