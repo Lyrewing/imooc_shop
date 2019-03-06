@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:imooc/home/banner.dart';
+import 'package:imooc/home/employment.dart';
 import 'package:imooc/home/lession.dart';
 import 'package:imooc/home/section.dart';
+import 'package:imooc/home/teacher.dart';
 
 class RecommandView extends StatefulWidget {
   @override
@@ -24,7 +26,7 @@ class RecommandViewState extends State<RecommandView> {
           padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10),
           color: Colors.white,
           height: 120.0,
-          child: HomeBanner(),
+          child: HomeBanner(scale: 0.8,viewportFraction: 0.8,autoplay: true,),
         ),
         Container(
           color: Colors.white,
@@ -95,6 +97,57 @@ class RecommandViewState extends State<RecommandView> {
             ],
           ),
         ),
+        Container(
+            color: Colors.white,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Section('就业班'),
+                Row(
+                  children: <Widget>[
+                    EmploymentItem(title: 'Java工程师',subTitle: '综合就业排名第一',src: 'https://class.imooc.com/static/module/index/img/java.png',),
+                    EmploymentItem(title: '前端工程师',subTitle: '互联网时代数字火爆技术',src: 'https://class.imooc.com/static/module/index/img/fe.png',),
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    EmploymentItem(title: 'Android工程师',subTitle: '移动设备市场份额第一',src: 'https://class.imooc.com/static/module/index/img/android.png',),
+                    EmploymentItem(title: 'PHP工程师',subTitle: '世界上最好的语言',src: 'https://class.imooc.com/static/module/index/img/php.png',),
+                  ],
+                ),
+              ],
+            )),
+
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 10),
+            padding: EdgeInsets.fromLTRB(0.0, 0.0, 0, 20),
+            color: Colors.white,
+            child: Column(
+              children: <Widget>[
+                Section('专题推荐'),
+                Container(
+                  height: 110,
+                  child: HomeBanner(scale: 0.9,viewportFraction: 0.9,autoplay: false,pagination: false,),
+                ) 
+              ],
+            ),
+          ),
+          Container(
+            child: Column(
+              children: <Widget>[
+                Section('精英讲师'),
+                Container(
+                  height: 150,
+                  child:TeacherSection(),
+                ),
+                Container(
+                  height: 150,
+                  color: Colors.white,
+                )
+              ],
+            ),
+          ),
+
       ],
     );
   }

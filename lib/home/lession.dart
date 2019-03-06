@@ -52,9 +52,9 @@ class LessionItemState extends State<LessionItem> {
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.red[100]
                       ),
-                      height: 18,
+                      height: 16,
                       padding: EdgeInsets.fromLTRB(4, 2, 4,2),
-                      child: Text('$clip',style: TextStyle(fontSize: 9,color: Colors.red[900]),),
+                      child: Text('$clip',style: TextStyle(fontSize: 9,color: Colors.red),),
                       ),
                     Text('￥$price',style: TextStyle(fontSize: 12),)
                   ],

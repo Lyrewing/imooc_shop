@@ -3,6 +3,11 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:imooc/mocks/mocks.dart';
 
 class HomeBanner extends StatefulWidget {
+  double viewportFraction;
+  double scale;
+  bool autoplay;
+  bool pagination=true;
+  HomeBanner({this.scale,this.viewportFraction,this.autoplay,this.pagination=true});
   @override
   HomeBannerState createState() {
     return HomeBannerState();
@@ -20,18 +25,19 @@ class HomeBannerState extends State<HomeBanner> {
           padding: EdgeInsets.fromLTRB(0.0,8.0,0.0,0.0),
           child: Swiper(
             itemBuilder: _swiperBuilder,
-            itemCount: 3,
-            viewportFraction: 0.8,
-            scale: 0.8,
+            itemCount: swipItems.length,
+            viewportFraction: widget.viewportFraction,
+            scale: widget.scale,
             duration: 500,
-            pagination: new SwiperPagination(
+            loop: true,
+            pagination:widget.pagination?SwiperPagination(
               builder: DotSwiperPaginationBuilder(
               color: Colors.white24,
               activeColor: Colors.white,
               size: 6.0
-            )),
+            )):SwiperPagination.rect,
             scrollDirection: Axis.horizontal,
-            autoplay: true,
+            autoplay: widget.autoplay,
             onTap: (index) => print('点击了第$index个'),
           )
         ),

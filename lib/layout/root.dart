@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:imooc/account/account.dart';
 import 'package:imooc/home/home.dart';
+import 'package:imooc/note/note.dart';
 
 
 
@@ -49,9 +51,9 @@ class RootPageState extends State<RootPage> {
       body: IndexedStack(
         children: <Widget>[
          HomePage(title: '首页'),
-         Center(child: Text('手记'),) ,
-         Center(child: Text('我的课程'),) ,
-         Center(child: Text('账号')) 
+         NodePage(),
+         Center(child: Text('账号')) ,
+         AccountPage(),
         ],
         index: _tabIndex,
       ),
