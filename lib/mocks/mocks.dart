@@ -19,5 +19,5 @@ var teachers=[
   Teacher(name: 'CrazyCodeBoy',career: 'Web前端工程师',avatar: 'https://img3.mukewang.com/54584cb50001e5b302200220-100-100.jpg'),
   Teacher(name: 'NavCat',career: '全栈工程师',avatar: 'https://img.mukewang.com/5333a0350001692e02200220-100-100.jpg'),
   Teacher(name: 'IAMTESTER',career: '软件测试工程师',avatar: 'https://img2.mukewang.com/5347593e00010cfb01400140-100-100.jpg')
-
 ];
+

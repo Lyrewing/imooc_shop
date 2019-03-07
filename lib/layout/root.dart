@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:imooc/account/account.dart';
 import 'package:imooc/home/home.dart';
 import 'package:imooc/note/note.dart';
+import 'package:imooc/video/video.dart';
 
 
 
@@ -52,7 +53,7 @@ class RootPageState extends State<RootPage> {
         children: <Widget>[
          HomePage(title: '首页'),
          NodePage(),
-         Center(child: Text('账号')) ,
+         VideoPage() ,
          AccountPage(),
         ],
         index: _tabIndex,
