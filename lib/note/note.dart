@@ -24,6 +24,7 @@ class NodePageState extends State<NodePage> {
     var nodes =await NodeProxy.getNodes();
     setState(() {
       this.nodeInfos =nodes;
+      
     });
   }
 
@@ -88,7 +89,6 @@ class NodePageState extends State<NodePage> {
                   padding: EdgeInsets.symmetric(vertical: 10),
                   child: Column(
                     children: 
-                    
                      <Widget>[
                       NodeItem(
                         title: '50行代码学会Koa2中间件原理',
