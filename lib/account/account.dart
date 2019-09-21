@@ -60,18 +60,7 @@ class AccountPage extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            height: 60,
-            margin: EdgeInsets.symmetric(vertical: 10,horizontal: 5),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
-              image: DecorationImage(
-                image: NetworkImage('https://class.imooc.com/static/module/index/img/banner-bg.png'),
-                fit: BoxFit.fill
-              ),
-              color: Colors.blue
-            ),
-          ),
+          Divider(),
           AccountMenu(name: '分享赚学费',nop: '查看收益与提现',),
           Divider(),
           AccountMenu(name: '购物车',nop: '',),

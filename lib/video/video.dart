@@ -19,8 +19,8 @@ class VideoPageState extends State<VideoPage> {
     _chewieController =ChewieController(
       videoPlayerController: _controller,
       aspectRatio: 16/9,
-      autoPlay: true,
-      looping: true
+      autoPlay: false,
+      looping: false
 
     );
   }
