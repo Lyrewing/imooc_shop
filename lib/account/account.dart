@@ -49,14 +49,15 @@ class AccountPage extends StatelessWidget {
             ),
           ),
           Container(
+            margin: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
             child: Row(
               mainAxisAlignment:MainAxisAlignment.spaceAround,
               children: <Widget>[
-                Text('关注 14'),
-                Text('|'),
-                Text('粉丝 0'),
-                Text('|'),
-                Text('积分 3')
+                Text('关注 14',style: TextStyle(fontSize: 18),),
+                Text('|',style: TextStyle(fontSize: 18),),
+                Text('粉丝 0',style: TextStyle(fontSize: 18),),
+                Text('|',style: TextStyle(fontSize: 18),),
+                Text('积分 3',style: TextStyle(fontSize: 18),)
               ],
             ),
           ),

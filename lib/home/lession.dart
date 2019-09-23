@@ -5,7 +5,7 @@ class LessionItem extends StatefulWidget {
   String title;
   double price;
   String clip;
-  LessionItem({this.title,this.src,this.price,this.clip});
+  LessionItem({this.title, this.src, this.price, this.clip});
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -16,10 +16,10 @@ class LessionItem extends StatefulWidget {
 class LessionItemState extends State<LessionItem> {
   @override
   Widget build(BuildContext context) {
-    var src =widget.src;
-    var title =widget.title;
-    var price =widget.price;
-    var clip =widget.clip;
+    var src = widget.src;
+    var title = widget.title;
+    var price = widget.price;
+    var clip = widget.clip;
     // TODO: implement build
     return Container(
       height: 70,
@@ -32,10 +32,9 @@ class LessionItemState extends State<LessionItem> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(6.0),
                 image: DecorationImage(
-                    image: NetworkImage('$src',scale: 30),
-                    fit: BoxFit.fill,
-                      )
-                    ),
+                  image: NetworkImage('$src', scale: 30),
+                  fit: BoxFit.fill,
+                )),
           ),
           SizedBox(width: 10),
           Container(
@@ -44,19 +43,28 @@ class LessionItemState extends State<LessionItem> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
-                Text('$title'),
+                Text(
+                  '$title',
+                  overflow: TextOverflow.ellipsis,
+                ),
                 Row(
                   children: <Widget>[
                     Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: Colors.red[100]
-                      ),
+                          borderRadius: BorderRadius.circular(8),
+                          color: Colors.red[100]),
                       height: 16,
-                      padding: EdgeInsets.fromLTRB(4, 2, 4,2),
-                      child: Text('$clip',style: TextStyle(fontSize: 9,color: Colors.red),),
-                      ),
-                    Text('￥$price',style: TextStyle(fontSize: 12),)
+                      padding: EdgeInsets.fromLTRB(4, 2, 4, 2),
+                      child: Center(
+                          child: Text(
+                        '$clip',
+                        style: TextStyle(fontSize: 9, color: Colors.red),
+                      )),
+                    ),
+                    Text(
+                      '  ￥$price',
+                      style: TextStyle(fontSize: 12),
+                    )
                   ],
                 )
               ],

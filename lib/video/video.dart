@@ -15,11 +15,11 @@ class VideoPageState extends State<VideoPage> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network('http://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_20mb.mp4');
+    _controller = VideoPlayerController.network('http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4');
     _chewieController =ChewieController(
       videoPlayerController: _controller,
       aspectRatio: 16/9,
-      autoPlay: false,
+      autoPlay: true,
       looping: false
 
     );
